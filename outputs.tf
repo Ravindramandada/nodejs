@@ -1,12 +1,8 @@
 # ------------------------------------------------------------------------------
 # Output
 # ------------------------------------------------------------------------------
-output "arn" {
-  description = "Full ARN of the repository."
-  value       = aws_ecr_repository.ecr_repo.arn
+output "App_DNS_Name" {
+  description = "Application Domain Address"
+  value       = aws_lb.application_load_balancer.dns_name
 }
 
-output "url" {
-  description = "The URL of the repository (in the form aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName )"
-  value       = aws_ecr_repository.ecr_repo.repository_url
-}
